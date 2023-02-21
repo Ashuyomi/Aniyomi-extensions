@@ -126,7 +126,7 @@ jobs:
 
   #    - name: Upload APKs (chunk ${{ matrix.chunk }})
   #      uses: actions/upload-artifact@v2
-  #      if: "github.repository == 'jmir1/aniyomi-extensions'"
+  #      if: "github.repository == 'Ashuyomi/Aniyomi-extensions'"
   #      with:
   #        name: "multisrc-apks-${{ matrix.chunk }}"
   #        path: "**/*.apk"
@@ -170,7 +170,7 @@ jobs:
 
       - name: Upload APKs (chunk ${{ matrix.chunk }})
         uses: actions/upload-artifact@v2
-        if: "github.repository == 'jmir1/aniyomi-extensions'"
+        if: "github.repository == 'Ashuyomi/Aniyomi-extensions'"
         with:
           name: "individual-apks-${{ matrix.chunk }}"
           path: "**/*.apk"
@@ -183,7 +183,7 @@ jobs:
     name: Publish repo
     needs:
       - build_individual
-    if: "github.repository == 'jmir1/aniyomi-extensions'"
+    if: "github.repository == 'Ashuyomi/Aniyomi-extensions'"
     runs-on: ubuntu-latest
     steps:
       - name: Download APK artifacts
